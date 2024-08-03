@@ -99,7 +99,7 @@ def DocRemaining(df, cl):
         # Obtenir les colonnes contenant des valeurs NaN
         na_columns = row[row.isna()].index.tolist()
         if not na_columns:
-            return 'NAAAAADI', []
+            return "Tous les documents sont fournis", []
         # Stocker le résultat dans le dictionnaire
         rows_with_na_columns[index] = na_columns
         remaining_docs = [cl[col].iloc[0] for col in rows_with_na_columns[index]]
